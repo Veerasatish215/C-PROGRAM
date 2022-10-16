@@ -1,0 +1,45 @@
+#include<stdio.h>
+float interest(float p,float t)
+{
+	float si;
+	si=(p*12*t)/100;
+	return si;
+}
+float interest2(float p,float t)
+{
+	float si;
+	si=(p*10*t)/100;
+	return si;
+}
+int main()
+{
+	float a,c;
+	float simple_interest;
+	char d;
+	printf("is customer senior citizem(y/n)=\n");
+	scanf("%c",&d);
+	printf("enter principal=");
+	scanf("%f",&a);
+	if(a<0)
+	{
+		printf("enter a valid principal amount");
+	}
+	printf("enter time=");
+	scanf("%f",&c);
+	if(c<0)
+	{
+		printf("enter a valid time period");
+    }
+	if(d=='y')
+	{
+		simple_interest=interest(a,c);
+	    printf("simple interest=%2f",simple_interest);
+	}
+	else
+	{
+		simple_interest=interest2(a,c);
+	    printf("simple interest=%2f",simple_interest);
+	
+	}
+	return 0;
+}
